@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Lu Fernandes 💖</title>
+
+<style>
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0a0f2c, #020617);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* TELAS */
+.tela {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.ativa {
+  display: block;
+}
+
+/* BOTÃO */
+button {
+  padding: 10px 20px;
+  background: #ff4da6;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* TEXTO TOPO */
+.title {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.9);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  color: black;
+}
+
+/* FLORES */
+.flores {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+svg {
+  transition: transform 0.3s;
+}
+svg:hover {
+  transform: scale(1.1);
+}
+
+/* SEGUNDA TELA */
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 25px;
+}
+
+/* FOTO */
+.cardFoto {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  animation: aparecer 1s ease;
+}
+
+.fotoUnica {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+}
+
+/* TEXTO */
+.mensagem {
+  width: 80%;
+  max-width: 320px;
+  background: rgba(255,255,255,0.9);
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  animation: aparecer 1.2s ease;
+}
+
+/* ANIMAÇÃO */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ESTRELAS */
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: gold;
+  border-radius: 50%;
+  animation: piscar 2s infinite alternate;
+}
+@keyframes piscar {
+  from {opacity: 0.2;}
+  to {opacity: 1;}
+}
+
+/* CORAÇÕES */
+.heart {
+  position: absolute;
+  font-size: 20px;
+  animation: subir 6s linear infinite;
+}
+@keyframes subir {
+  from {transform: translateY(0); opacity: 1;}
+  to {transform: translateY(-400px); opacity: 0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🌸 TELA 1 -->
+<div id="tela1" class="tela ativa">
+
+  <div class="title">
+    <h1>Lu Fernandes 💖</h1>
+    <p>Feliz Aniversário 🎂</p>
+    <button onclick="trocarTela()">Ver surpresa 🎁</button>
+  </div>
+
+  <div class="flores">
+
+    <!-- ROSA -->
+    <svg width="120" viewBox="0 0 100 120">
+      <rect x="48" y="50" width="4" height="50" fill="#4b0033"/>
+      <ellipse cx="30" cy="70" rx="15" ry="8" fill="green"/>
+      <ellipse cx="70" cy="70" rx="15" ry="8" fill="green"/>
+      <g fill="#ff1493" stroke="#4b0033" stroke-width="2">
+        <ellipse cx="50" cy="40" rx="15" ry="20"/>
+        <ellipse cx="35" cy="45" rx="15" ry="20"/>
+        <ellipse cx="65" cy="45" rx="15" ry="20"/>
+        <ellipse cx="50" cy="55" rx="18" ry="18"/>
+      </g>
+    </svg>
+
+    <!-- DOURADA -->
+    <svg width="120" viewBox="0 0 100 120">
+      <rect x="48" y="50" width="4" height="50" fill="#4b3b00"/>
+      <ellipse cx="30" cy="70" rx="15" ry="8" fill="green"/>
+      <ellipse cx="70" cy="70" rx="15" ry="8" fill="green"/>
+      <g fill="gold" stroke="#4b3b00" stroke-width="2">
+        <ellipse cx="50" cy="40" rx="15" ry="20"/>
+        <ellipse cx="35" cy="45" rx="15" ry="20"/>
+        <ellipse cx="65" cy="45" rx="15" ry="20"/>
+        <ellipse cx="50" cy="55" rx="18" ry="18"/>
+      </g>
+    </svg>
+
+    <!-- AZUL -->
+    <svg width="120" viewBox="0 0 100 120">
+      <rect x="48" y="50" width="4" height="50" fill="#001f4d"/>
+      <ellipse cx="30" cy="70" rx="15" ry="8" fill="green"/>
+      <ellipse cx="70" cy="70" rx="15" ry="8" fill="green"/>
+      <g fill="#002f6c" stroke="#001f4d" stroke-width="2">
+        <ellipse cx="50" cy="40" rx="15" ry="20"/>
+        <ellipse cx="35" cy="45" rx="15" ry="20"/>
+        <ellipse cx="65" cy="45" rx="15" ry="20"/>
+        <ellipse cx="50" cy="55" rx="18" ry="18"/>
+      </g>
+    </svg>
+
+  </div>
+
+</div>
+
+<!-- 💖 TELA 2 -->
+<div id="tela2" class="tela">
+
+  <div class="container2">
+
+    <!-- FOTO -->
+    <div class="cardFoto">
+      <img src="https://s11.aconvert.com/convert/p3r68-cdx67/ujdcs-u7l5a.jpg" class="fotoUnica">
+    </div>
+
+    <!-- TEXTO -->
+    <div class="mensagem">
+      <h2>Lu Fernandes 💖</h2>
+      <p>
+        Que seu dia seja incrível ✨  
+        cheio de amor, felicidade e momentos inesquecíveis 💕
+      </p>
+
+      <button onclick="trocarTela()">Voltar 🌸</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function trocarTela(){
+  document.getElementById("tela1").classList.toggle("ativa");
+  document.getElementById("tela2").classList.toggle("ativa");
+}
+
+/* estrelas */
+for(let i=0;i<60;i++){
+  let s=document.createElement("div");
+  s.className="star";
+  s.style.top=Math.random()*100+"%";
+  s.style.left=Math.random()*100+"%";
+  document.body.appendChild(s);
+}
+
+/* corações */
+setInterval(()=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="💖";
+  h.style.left=Math.random()*100+"%";
+  h.style.bottom="0px";
+  document.body.appendChild(h);
+
+  setTimeout(()=>h.remove(),6000);
+},800);
+</script>
+
+</body>
+</html>
